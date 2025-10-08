@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Restaurant List View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="RestaurantListViewController" customModule="FoodForAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="abc-123-def">
+                                <rect key="frame" x="0.0" y="59" width="393" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="def-456-ghi">
+                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="abc-123-def" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1a2-3b4-5c6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="abc-123-def" secondAttribute="trailing" id="2b3-4c5-6d7"/>
+                            <constraint firstItem="abc-123-def" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="3c4-5d6-7e8"/>
+                            <constraint firstItem="def-456-ghi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4d5-6e7-8f9"/>
+                            <constraint firstItem="def-456-ghi" firstAttribute="top" secondItem="abc-123-def" secondAttribute="bottom" constant="0.0" id="5e6-7f8-9g0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="def-456-ghi" secondAttribute="trailing" id="6f7-8g9-0h1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="def-456-ghi" secondAttribute="bottom" id="7g8-9h0-1i2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="FoodForAll" id="8h9-0i1-2j3">
+                        <barButtonItem key="rightBarButtonItems">
+                            <barButtonItem key="accessibilityButton" title="Dostępność" id="9i0-1j2-3k4">
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </barButtonItem>
+                            <barButtonItem key="filterButton" title="Filtry" id="0j1-2k3-4l5">
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </barButtonItem>
+                            <barButtonItem key="sortButton" title="Sortuj" id="1k2-3l4-5m6">
+                                <color key="tintColor" systemColor="systemBlueColor"/>
+                            </barButtonItem>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="accessibilityButton" destination="9i0-1j2-3k4" id="2l3-4m5-6n7"/>
+                        <outlet property="filterButton" destination="0j1-2k3-4l5" id="3m4-5n6-7o8"/>
+                        <outlet property="searchBar" destination="abc-123-def" id="4n5-6o7-8p9"/>
+                        <outlet property="sortButton" destination="1k2-3l4-5m6" id="5o6-7p8-9q0"/>
+                        <outlet property="tableView" destination="def-456-ghi" id="6p7-8q9-0r1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="3"/>
+        </scene>
+        <!--Restaurant Detail View Controller-->
+        <scene sceneID="7r1-8s2-9t3">
+            <objects>
+                <viewController id="4u5-6v7-8w9" customClass="RestaurantDetailViewController" customModule="FoodForAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0x1-2y3-4z5">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1a2-3b4-5c6">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2b3-4c5-6d7">
+                                        <rect key="frame" x="0.0" y="0.0" width="393" height="1200"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo" translatesAutoresizingMaskIntoConstraints="NO" id="3c4-5d6-7e8">
+                                                <rect key="frame" x="16" y="16" width="361" height="200"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazwa restauracji" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4d5-6e7-8f9">
+                                                <rect key="frame" x="16" y="232" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuchnia" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5e6-7f8-9g0">
+                                                <rect key="frame" x="16" y="261" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ocena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6f7-8g9-0h1">
+                                                <rect key="frame" x="16" y="290" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cena" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7g8-9h0-1i2">
+                                                <rect key="frame" x="16" y="319" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Adres" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8h9-0i1-2j3">
+                                                <rect key="frame" x="16" y="348" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Telefon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9i0-1j2-3k4">
+                                                <rect key="frame" x="16" y="377" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strona internetowa" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0j1-2k3-4l5">
+                                                <rect key="frame" x="16" y="406" width="361" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" systemColor="labelColor"/>
+                                            </label>
+                                            <mapView clipsSubviews="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="1k2-3l4-5m6">
+                                                <rect key="frame" x="16" y="443" width="361" height="200"/>
+                                            </mapView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2l3-4m5-6n7">
+                                                <rect key="frame" x="16" y="659" width="361" height="100"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="3m4-5n6-7o8">
+                                                <rect key="frame" x="16" y="775" width="361" height="100"/>
+                                            </stackView>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4n5-6o7-8p9">
+                                                <rect key="frame" x="16" y="891" width="361" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5o6-7p8-9q0"/>
+                                                </constraints>
+                                                <state key="normal" title="Zadzwoń"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Zadzwoń"/>
+                                                <connections>
+                                                    <action selector="callButtonTapped:" destination="4u5-6v7-8w9" eventType="touchUpInside" id="6p7-8q9-0r1"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7q8-9r0-1s2">
+                                                <rect key="frame" x="16" y="957" width="361" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="8r9-0s1-2t3"/>
+                                                </constraints>
+                                                <state key="normal" title="Strona internetowa"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Strona internetowa"/>
+                                                <connections>
+                                                    <action selector="websiteButtonTapped:" destination="4u5-6v7-8w9" eventType="touchUpInside" id="9s0-1t2-3u4"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0t1-2u3-4v5">
+                                                <rect key="frame" x="16" y="1023" width="361" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="1u2-3v4-5w6"/>
+                                                </constraints>
+                                                <state key="normal" title="Nawiguj"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Nawiguj"/>
+                                                <connections>
+                                                    <action selector="directionsButtonTapped:" destination="4u5-6v7-8w9" eventType="touchUpInside" id="2v3-4w5-6x7"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="3c4-5d6-7e8" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="3w4-5x6-7y8"/>
+                                            <constraint firstItem="3c4-5d6-7e8" firstAttribute="top" secondItem="2b3-4c5-6d7" secondAttribute="top" constant="16" id="4x5-6y7-8z9"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="3c4-5d6-7e8" secondAttribute="trailing" constant="16" id="5y6-7z8-9a0"/>
+                                            <constraint firstItem="4d5-6e7-8f9" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="6z7-8a9-0b1"/>
+                                            <constraint firstItem="4d5-6e7-8f9" firstAttribute="top" secondItem="3c4-5d6-7e8" secondAttribute="bottom" constant="16" id="7a8-9b0-1c2"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="4d5-6e7-8f9" secondAttribute="trailing" constant="16" id="8b9-0c1-2d3"/>
+                                            <constraint firstItem="5e6-7f8-9g0" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="9c0-1d2-3e4"/>
+                                            <constraint firstItem="5e6-7f8-9g0" firstAttribute="top" secondItem="4d5-6e7-8f9" secondAttribute="bottom" constant="8" id="0d1-2e3-4f5"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="5e6-7f8-9g0" secondAttribute="trailing" constant="16" id="1e2-3f4-5g6"/>
+                                            <constraint firstItem="6f7-8g9-0h1" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="2f3-4g5-6h7"/>
+                                            <constraint firstItem="6f7-8g9-0h1" firstAttribute="top" secondItem="5e6-7f8-9g0" secondAttribute="bottom" constant="8" id="3g4-5h6-7i8"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="6f7-8g9-0h1" secondAttribute="trailing" constant="16" id="4h5-6i7-8j9"/>
+                                            <constraint firstItem="7g8-9h0-1i2" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="5i6-7j8-9k0"/>
+                                            <constraint firstItem="7g8-9h0-1i2" firstAttribute="top" secondItem="6f7-8g9-0h1" secondAttribute="bottom" constant="8" id="6j7-8k9-0l1"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="7g8-9h0-1i2" secondAttribute="trailing" constant="16" id="7k8-9l0-1m2"/>
+                                            <constraint firstItem="8h9-0i1-2j3" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="8l9-0m1-2n3"/>
+                                            <constraint firstItem="8h9-0i1-2j3" firstAttribute="top" secondItem="7g8-9h0-1i2" secondAttribute="bottom" constant="8" id="9m0-1n2-3o4"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="8h9-0i1-2j3" secondAttribute="trailing" constant="16" id="0n1-2o3-4p5"/>
+                                            <constraint firstItem="9i0-1j2-3k4" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="1o2-3p4-5q6"/>
+                                            <constraint firstItem="9i0-1j2-3k4" firstAttribute="top" secondItem="8h9-0i1-2j3" secondAttribute="bottom" constant="8" id="2p3-4q5-6r7"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="9i0-1j2-3k4" secondAttribute="trailing" constant="16" id="3q4-5r6-7s8"/>
+                                            <constraint firstItem="0j1-2k3-4l5" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="4r5-6s7-8t9"/>
+                                            <constraint firstItem="0j1-2k3-4l5" firstAttribute="top" secondItem="9i0-1j2-3k4" secondAttribute="bottom" constant="8" id="5s6-7t8-9u0"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="0j1-2k3-4l5" secondAttribute="trailing" constant="16" id="6t7-8u9-0v1"/>
+                                            <constraint firstItem="1k2-3l4-5m6" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="7u8-9v0-1w2"/>
+                                            <constraint firstItem="1k2-3l4-5m6" firstAttribute="top" secondItem="0j1-2k3-4l5" secondAttribute="bottom" constant="16" id="8v9-0w1-2x3"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="1k2-3l4-5m6" secondAttribute="trailing" constant="16" id="9w0-1x2-3y4"/>
+                                            <constraint firstItem="1k2-3l4-5m6" firstAttribute="height" constant="200" id="0x1-2y3-4z5"/>
+                                            <constraint firstItem="2l3-4m5-6n7" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="1y2-3z4-5a6"/>
+                                            <constraint firstItem="2l3-4m5-6n7" firstAttribute="top" secondItem="1k2-3l4-5m6" secondAttribute="bottom" constant="16" id="2z3-4a5-6b7"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="2l3-4m5-6n7" secondAttribute="trailing" constant="16" id="3a4-5b6-7c8"/>
+                                            <constraint firstItem="3m4-5n6-7o8" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="4b5-6c7-8d9"/>
+                                            <constraint firstItem="3m4-5n6-7o8" firstAttribute="top" secondItem="2l3-4m5-6n7" secondAttribute="bottom" constant="16" id="5c6-7d8-9e0"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="3m4-5n6-7o8" secondAttribute="trailing" constant="16" id="6d7-8e9-0f1"/>
+                                            <constraint firstItem="4n5-6o7-8p9" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="7e8-9f0-1g2"/>
+                                            <constraint firstItem="4n5-6o7-8p9" firstAttribute="top" secondItem="3m4-5n6-7o8" secondAttribute="bottom" constant="16" id="8f9-0g1-2h3"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="4n5-6o7-8p9" secondAttribute="trailing" constant="16" id="9g0-1h2-3i4"/>
+                                            <constraint firstItem="7q8-9r0-1s2" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="0h1-2i3-4j5"/>
+                                            <constraint firstItem="7q8-9r0-1s2" firstAttribute="top" secondItem="4n5-6o7-8p9" secondAttribute="bottom" constant="16" id="1i2-3j4-5k6"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="7q8-9r0-1s2" secondAttribute="trailing" constant="16" id="2j3-4k5-6l7"/>
+                                            <constraint firstItem="0t1-2u3-4v5" firstAttribute="leading" secondItem="2b3-4c5-6d7" secondAttribute="leading" constant="16" id="3k4-5l6-7m8"/>
+                                            <constraint firstItem="0t1-2u3-4v5" firstAttribute="top" secondItem="7q8-9r0-1s2" secondAttribute="bottom" constant="16" id="4l5-6m7-8n9"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="trailing" secondItem="0t1-2u3-4v5" secondAttribute="trailing" constant="16" id="5m6-7n8-9o0"/>
+                                            <constraint firstItem="2b3-4c5-6d7" firstAttribute="bottom" secondItem="0t1-2u3-4v5" secondAttribute="bottom" constant="16" id="6n7-8o9-0p1"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="2b3-4c5-6d7" firstAttribute="leading" secondItem="1a2-3b4-5c6" secondAttribute="leading" id="7o8-9p0-1q2"/>
+                                    <constraint firstItem="2b3-4c5-6d7" firstAttribute="top" secondItem="1a2-3b4-5c6" secondAttribute="top" id="8p9-0q1-2r3"/>
+                                    <constraint firstItem="1a2-3b4-5c6" firstAttribute="trailing" secondItem="2b3-4c5-6d7" secondAttribute="trailing" id="9q0-1r2-3s4"/>
+                                    <constraint firstItem="1a2-3b4-5c6" firstAttribute="bottom" secondItem="2b3-4c5-6d7" secondAttribute="bottom" id="0r1-2s3-4t5"/>
+                                    <constraint firstItem="2b3-4c5-6d7" firstAttribute="width" secondItem="1a2-3b4-5c6" secondAttribute="width" id="1s2-3t4-5u6"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2t3-4u5-6v7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1a2-3b4-5c6" firstAttribute="leading" secondItem="2t3-4u5-6v7" secondAttribute="leading" id="3u4-5v6-7w8"/>
+                            <constraint firstItem="2t3-4u5-6v7" firstAttribute="trailing" secondItem="1a2-3b4-5c6" secondAttribute="trailing" id="4v5-6w7-8x9"/>
+                            <constraint firstItem="1a2-3b4-5c6" firstAttribute="top" secondItem="2t3-4u5-6v7" secondAttribute="top" id="5w6-7x8-9y0"/>
+                            <constraint firstItem="2t3-4u5-6v7" firstAttribute="bottom" secondItem="1a2-3b4-5c6" secondAttribute="bottom" id="6x7-8y9-0z1"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Szczegóły" id="7y8-9z0-1a2"/>
+                    <connections>
+                        <outlet property="accessibilityStackView" destination="2l3-4m5-6n7" id="8z9-0a1-2b3"/>
+                        <outlet property="addressLabel" destination="8h9-0i1-2j3" id="9a0-1b2-3c4"/>
+                        <outlet property="callButton" destination="4n5-6o7-8p9" id="0b1-2c3-4d5"/>
+                        <outlet property="contentView" destination="2b3-4c5-6d7" id="1c2-3d4-5e6"/>
+                        <outlet property="cuisineLabel" destination="5e6-7f8-9g0" id="2d3-4e5-6f7"/>
+                        <outlet property="directionsButton" destination="0t1-2u3-4v5" id="3e4-5f6-7g8"/>
+                        <outlet property="mapView" destination="1k2-3l4-5m6" id="4f5-6g7-8h9"/>
+                        <outlet property="nameLabel" destination="4d5-6e7-8f9" id="5g6-7h8-9i0"/>
+                        <outlet property="openingHoursStackView" destination="3m4-5n6-7o8" id="6h7-8i9-0j1"/>
+                        <outlet property="phoneLabel" destination="9i0-1j2-3k4" id="7i8-9j0-1k2"/>
+                        <outlet property="priceLabel" destination="7g8-9h0-1i2" id="8j9-0k1-2l3"/>
+                        <outlet property="ratingLabel" destination="6f7-8g9-0h1" id="9k0-1l2-3m4"/>
+                        <outlet property="restaurantImageView" destination="3c4-5d6-7e8" id="0l1-2m3-4n5"/>
+                        <outlet property="scrollView" destination="1a2-3b4-5c6" id="1m2-3n4-5o6"/>
+                        <outlet property="websiteButton" destination="7q8-9r0-1s2" id="2n3-4o5-6p7"/>
+                        <outlet property="websiteLabel" destination="0j1-2k3-4l5" id="3o4-5p6-7q8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4p5-6q7-8r9" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="3"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="photo" width="128" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
